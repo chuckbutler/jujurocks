@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get 'home/index'
-  get 'player/index'
+  get 'player', to: 'player#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

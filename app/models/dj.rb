@@ -1,5 +1,7 @@
 class Dj
   include Mongoid::Document
+  include Mongoid::Timestamps::Short
+
   field :name_first, type: String
   field :name_last, type: String
   field :email, type: String

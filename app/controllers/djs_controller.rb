@@ -4,11 +4,10 @@ class DjsController < ApplicationController
   # GET /djs
   # GET /djs.json
   def index
+    # @djs = Dj.all
     respond_to do |format|
       format.html { redirect_to({action: 'new'}) }
     end
-    # @djs = Dj.all
-
   end
 
   # GET /djs/1
@@ -73,6 +72,6 @@ class DjsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dj_params
-      params[:dj]
+      params.require(:dj).permit(:name_first, :name_last, :email, :timezone, :requested_slot, :live, :skype_handle, :google_handle, :irc_handle, :genres, :frequency, :cc_license_accepted)
     end
 end

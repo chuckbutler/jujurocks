@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :podcasts
+
+  get 'schedule', to: 'schedule#index'
+  get 'about', to: 'about#index'
+  get 'player', to: 'player#index'
+
   root 'home#index'
-  get 'home/index'
-  get 'player/index'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

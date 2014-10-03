@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :podcasts
 
-  get 'schedule', to: 'schedule#index'
-  get 'about', to: 'about#index'
-  get 'player', to: 'player#index'
 
   root 'home#index'
+  get 'player', to: 'player#index'
+  get 'schedule', to: 'schedule#index'
+  get 'about', to: 'about#index'
+
+  resources :djs
+  resources :podcasts
+  resources :contacts, path: 'contact'
 
 
 

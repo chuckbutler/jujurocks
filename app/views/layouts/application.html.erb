@@ -6,22 +6,22 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <!-- Resources below here live in public/ -->
-  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="css/camera.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/css/camera.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen">
 
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-  <script type="text/javascript" src="js/superfish.js"></script>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="/js/superfish.js"></script>
 
-  <script type="text/javascript" src="js/jquery.ui.totop.js"></script>
+  <script type="text/javascript" src="/js/jquery.ui.totop.js"></script>
 
-  <script type="text/javascript" src="js/camera.js"></script>
-  <script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
+  <script type="text/javascript" src="/js/camera.js"></script>
+  <script type="text/javascript" src="/js/jquery.mobile.customized.min.js"></script>
 
-  <script type="text/javascript" src="js/jquery.caroufredsel.js"></script>
-  <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.caroufredsel.js"></script>
+  <script type="text/javascript" src="/js/jquery.touchSwipe.min.js"></script>
 
   <!--[if lt IE 8]>
 		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>
@@ -32,9 +32,27 @@
   <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
 <![endif]-->
 </head>
-<body>
-
-<%= yield %>
-
+<body class="main">
+  <div id="main">
+      <div class="bg2"></div>
+      <div class="bg3"></div>
+      <div id="inner">
+        <div class="container">
+          <div class="row">
+            <div class="span2">
+              <div class="box1"></div>
+            </div>
+            <div class="span10">
+              <div class="box0">
+              <%= render "shared/top_nav" %>
+              <%= render "shared/side_nav" %>
+              <%= yield %>
+              <%= render "shared/footer" %>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
 </body>
 </html>

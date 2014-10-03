@@ -1,0 +1,65 @@
+<%= form_for(@dj) do |f| %>
+  <% if @dj.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dj.errors.count, "error") %> prohibited this dj from being saved:</h2>
+
+      <ul>
+      <% @dj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name_first %><br>
+    <%= f.text_field :name_first %>
+  </div>
+  <div class="field">
+    <%= f.label :name_last %><br>
+    <%= f.text_field :name_last %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :timezone %><br>
+    <%= f.text_field :timezone %>
+  </div>
+  <div class="field">
+    <%= f.label :requested_slot %><br>
+    <%= f.text_field :requested_slot %>
+  </div>
+  <div class="field">
+    <%= f.label :live %><br>
+    <%= f.check_box :live %>
+  </div>
+  <div class="field">
+    <%= f.label :skype_handle %><br>
+    <%= f.text_field :skype_handle %>
+  </div>
+  <div class="field">
+    <%= f.label :google_handle %><br>
+    <%= f.text_field :google_handle %>
+  </div>
+  <div class="field">
+    <%= f.label :irc_handle %><br>
+    <%= f.text_field :irc_handle %>
+  </div>
+  <div class="field">
+    <%= f.label :genres %><br>
+    <%= f.text_field :genres %>
+  </div>
+  <div class="field">
+    <%= f.label :frequency %><br>
+    <%= f.text_field :frequency %>
+  </div>
+  <div class="field">
+    <%= f.label :cc_license_accepted %><br>
+    <%= f.check_box :cc_license_accepted %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

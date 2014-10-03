@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name first:</strong>
+  <%= @dj.name_first %>
+</p>
+
+<p>
+  <strong>Name last:</strong>
+  <%= @dj.name_last %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @dj.email %>
+</p>
+
+<p>
+  <strong>Timezone:</strong>
+  <%= @dj.timezone %>
+</p>
+
+<p>
+  <strong>Requested slot:</strong>
+  <%= @dj.requested_slot %>
+</p>
+
+<p>
+  <strong>Live:</strong>
+  <%= @dj.live %>
+</p>
+
+<p>
+  <strong>Skype handle:</strong>
+  <%= @dj.skype_handle %>
+</p>
+
+<p>
+  <strong>Google handle:</strong>
+  <%= @dj.google_handle %>
+</p>
+
+<p>
+  <strong>Irc handle:</strong>
+  <%= @dj.irc_handle %>
+</p>
+
+<p>
+  <strong>Genres:</strong>
+  <%= @dj.genres %>
+</p>
+
+<p>
+  <strong>Frequency:</strong>
+  <%= @dj.frequency %>
+</p>
+
+<p>
+  <strong>Cc license accepted:</strong>
+  <%= @dj.cc_license_accepted %>
+</p>
+
+<%= link_to 'Edit', edit_dj_path(@dj) %> |
+<%= link_to 'Back', djs_path %>

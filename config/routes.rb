@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
 
 
+  get 'terms/broadcast'
+
+  get 'terms/content'
+
+  get 'terms/codeofconduct'
+
   root 'home#index'
   get 'player', to: 'player#index'
   get 'schedule', to: 'schedule#index'

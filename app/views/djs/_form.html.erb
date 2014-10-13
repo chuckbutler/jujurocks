@@ -20,6 +20,6 @@
 
     <%= f.select :genres, [['Talk', 'talk'], ['Avant-Garde', 'avantgarde'], ['Caribbean / Latin', 'latin'], ['Comedy', 'comedy'], ['Country', 'country'], ['Easy Listening', 'easylistening'], ['Electronic', 'electronic'], ['Folk', 'folk'], ['Hip Hop', 'hiphop'], ['Jazz', 'jazz'], ['Pop', 'pop'], ['Rhythm and Blues', 'rnb'], ['Rock', 'rock'], ['Punk/Ska', 'ska'], ['Other', 'other']], {label: 'Primary Genre'} %>
     <%= f.check_box :live, label: "Live Performance?" %>
-    <%= f.check_box :cc_license_accepted, label: ("I have read and accept the #{link_to 'terms of broadcasting', root_path}").html_safe %>
+    <%= f.check_box :broadcast_license, label: ("I have read and accept the #{link_to 'terms of broadcasting', root_path}").html_safe %>
     <%= f.submit "Apply",  class: "btn btn-primary btn-large " %>
 <% end %>

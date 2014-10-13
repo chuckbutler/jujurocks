@@ -16,9 +16,9 @@
     <%= f.text_field :email, placeholder: 'you@example.com', class: 'input-xlarge' %>
     <%= f.select :frequency, [["Daily", "daily"], ["Weekly", "weekly"], ["Bi-Weekly", "biweekly"], ["Monthly", 'monthly'], ["Once", "once"]], { label: "How Often?" }, { class: "selectpicker" } %>
     <%= f.time_zone_select(:timezone, ActiveSupport::TimeZone.us_zones, default: "Eastern Time (US & Canada)", class: 'span4') %>
-    <%= f.select :requested_slot, [], { label: "Eastern TimeZone - Requested Timeslot" }%>
+    <%= f.select :requested_slot, [['Morning', 'mor'], ['Afternoon', 'after'], ['Evening', 'even'], ['Late Night', 'late'], ['OverNight', 'onight']], { label: "Requested Timeslot" }%>
 
-    <%= f.select :genres, [] %>
+    <%= f.select :genres, [['Talk', 'talk'], ['Avant-Garde', 'avantgarde'], ['Caribbean / Latin', 'latin'], ['Comedy', 'comedy'], ['Country', 'country'], ['Easy Listening', 'easylistening'], ['Electronic', 'electronic'], ['Folk', 'folk'], ['Hip Hop', 'hiphop'], ['Jazz', 'jazz'], ['Pop', 'pop'], ['Rhythm and Blues', 'rnb'], ['Rock', 'rock'], ['Punk/Ska', 'ska'], ['Other', 'other']], {label: 'Primary Genre'} %>
     <%= f.check_box :live, label: "Live Performance?" %>
     <%= f.check_box :cc_license_accepted, label: ("I have read and accept the #{link_to 'terms of broadcasting', root_path}").html_safe %>
     <%= f.submit "Apply",  class: "btn btn-primary btn-lg " %>

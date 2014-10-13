@@ -26,11 +26,21 @@ gem 'bootstrap_form'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+gem 'valid_email', :require => 'valid_email/email_validator'
 
-group :development do
+group :development, :test do
   gem 'pry'
+  gem 'spring-commands-rspec'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'faker'
+  gem 'rb-readline'
 end
 
+gem 'simplecov', '~> 0.9.0', :require => false, :group => :test
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

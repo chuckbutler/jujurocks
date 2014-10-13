@@ -1,7 +1,7 @@
-<%= form_for(@dj) do |f| %>
+<%= bootstrap_form_for(@dj, label_errors: true) do |f| %>
   <% if @dj.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@dj.errors.count, "error") %> prohibited this dj from being saved:</h2>
+      <h2><%= pluralize(@dj.errors.count, "error") %> prohibited this application from being sent:</h2>
 
       <ul>
       <% @dj.errors.full_messages.each do |message| %>
@@ -11,55 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name_first %><br>
-    <%= f.text_field :name_first %>
-  </div>
-  <div class="field">
-    <%= f.label :name_last %><br>
-    <%= f.text_field :name_last %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :timezone %><br>
-    <%= f.text_field :timezone %>
-  </div>
-  <div class="field">
-    <%= f.label :requested_slot %><br>
-    <%= f.text_field :requested_slot %>
-  </div>
-  <div class="field">
-    <%= f.label :live %><br>
-    <%= f.check_box :live %>
-  </div>
-  <div class="field">
-    <%= f.label :skype_handle %><br>
-    <%= f.text_field :skype_handle %>
-  </div>
-  <div class="field">
-    <%= f.label :google_handle %><br>
-    <%= f.text_field :google_handle %>
-  </div>
-  <div class="field">
-    <%= f.label :irc_handle %><br>
-    <%= f.text_field :irc_handle %>
-  </div>
-  <div class="field">
-    <%= f.label :genres %><br>
-    <%= f.text_field :genres %>
-  </div>
-  <div class="field">
-    <%= f.label :frequency %><br>
-    <%= f.text_field :frequency %>
-  </div>
-  <div class="field">
-    <%= f.label :cc_license_accepted %><br>
-    <%= f.check_box :cc_license_accepted %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.text_field :name_first, label: "First Name", class: 'input-xlarge' %>
+    <%= f.text_field :name_last, label: "Last Name", class: 'input-xlarge' %>
+    <%= f.text_field :email, placeholder: 'you@example.com', class: 'input-xlarge' %>
+    <%= f.select :frequency, [["Daily", "daily"], ["Weekly", "weekly"], ["Bi-Weekly", "biweekly"], ["Monthly", 'monthly'], ["Once", "once"]], { label: "How Often?" }, { class: "selectpicker" } %>
+    <%= f.time_zone_select(:timezone, ActiveSupport::TimeZone.us_zones, default: "Eastern Time (US & Canada)", class: 'span4') %>
+    <%= f.select :requested_slot, [], { label: "Eastern TimeZone - Requested Timeslot" }%>
+
+    <%= f.select :genres, [] %>
+    <%= f.check_box :live, label: "Live Performance?" %>
+    <%= f.check_box :cc_license_accepted, label: ("I have read and accept the #{link_to 'terms of broadcasting', root_path}").html_safe %>
+    <%= f.submit "Apply",  class: "btn btn-primary btn-lg " %>
 <% end %>

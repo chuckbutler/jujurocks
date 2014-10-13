@@ -9,6 +9,14 @@ RSpec.describe Episode, :type => :model do
       it "Creates successfully" do
         expect(@epi).to be_valid
       end
+      it "Acknowledges tags are related" do
+        expect(@epi.tags).to_not be_nil
+      end
+      it "Knows tags are optional" do
+        epi = FactoryGirl.build(:episode, tags: [])
+        expect(epi.tags).to eq([])
+        expect(epi).to be_valid
+      end
     end
     context "With Invalid Attributes" do
       it "Fails without a title" do

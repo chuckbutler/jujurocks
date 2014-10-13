@@ -6,5 +6,8 @@ FactoryGirl.define do
     artist Faker::Name.name
     url Faker::Internet.url
     description Faker::Lorem.paragraph(1)
+    after(:create) do |epi|
+      epi.tags << FactoryGirl.build(:tag)
+    end
   end
 end

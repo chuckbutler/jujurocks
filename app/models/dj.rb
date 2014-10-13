@@ -14,4 +14,11 @@ class Dj
   field :genres, type: String
   field :frequency, type: String
   field :cc_license_accepted, type: Mongoid::Boolean
+
+  validates :name_first, :name_last, :email,  presence: true
+  validates :frequency, :requested_slot,  presence: true
+  validates :timezone, :cc_license_accepted,  presence: true
+
+
+
 end

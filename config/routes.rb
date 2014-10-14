@@ -2,20 +2,22 @@ Rails.application.routes.draw do
 
 
 
-  get 'terms/broadcast'
 
-  get 'terms/content'
-
-  get 'terms/codeofconduct'
-
+  # fairly static content pages
   root 'home#index'
   get 'player', to: 'player#index'
   get 'schedule', to: 'schedule#index'
   get 'about', to: 'about#index'
 
+  # Generated views backed by mongo
   resources :djs
   resources :podcasts
   resources :contacts, path: 'contact'
+
+  # legalese - kinda.
+  get 'terms/broadcast'
+  get 'terms/content'
+  get 'terms/codeofconduct'
 
 
 

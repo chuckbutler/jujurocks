@@ -10,6 +10,6 @@ FactoryGirl.define do
     genres "talk"
     frequency "weekly"
     requested_slot "after"
-    broadcast_license "true"
+    broadcast_license "1"
   end
 end

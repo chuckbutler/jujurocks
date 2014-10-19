@@ -31,7 +31,4 @@ class Dj
   validates :email, email: true
   validates :broadcast_license, :acceptance => {:accept => true}
 
-
-
-
 end

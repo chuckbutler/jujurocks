@@ -1,0 +1,3 @@
+rails:
+  repo: https://github.com/chuckbutler/jujurocks.git
+  env: SECRET_TOKEN=21a6d08e393e40b909e640d27301e42f48dc2690f348f3e90f830f78c8dec86a3f79c2c65b8fbf68bcd11356b38db2bd767213b806d7bcdb35ca58fd6b2d32e3

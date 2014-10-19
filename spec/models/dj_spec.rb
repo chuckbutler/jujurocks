@@ -38,11 +38,6 @@ RSpec.describe Dj, :type => :model do
             deej = FactoryGirl.build(:dj, genres: 'f')
             expect(deej).to_not be_valid
           end
-
-          it "fails when broadcast_license is not accepted" do
-            deej = FactoryGirl.build(:dj, broadcast_license: "0")
-            expect(deej).to_not be_valid
-          end
       end
 
   end

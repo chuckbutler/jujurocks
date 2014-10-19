@@ -8,9 +8,6 @@ class Dj
   field :timezone, type: String
   field :requested_slot, type: String
   field :live, type: Mongoid::Boolean
-  field :skype_handle, type: String
-  field :google_handle, type: String
-  field :irc_handle, type: String
   field :genres, type: String
   field :frequency, type: String
   field :broadcast_license, type: Mongoid::Boolean
@@ -32,7 +29,8 @@ class Dj
   validates :name_last, format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }
   validates :email, uniqueness: true
   validates :email, email: true
-  validates :broadcast_license, inclusion: { in: [true], message: "You must accept the broadcaster terms" }
+  validates :broadcast_license, :acceptance => {:accept => true}
+
 
 
 

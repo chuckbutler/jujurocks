@@ -37,3 +37,5 @@ Edit the charm_deploy.yaml file, and update it with your SECRET_KEY_SEED
 then Juju Deploy the rails charm, pointed at your github repository
 
     juju deploy cs:precise/rails --config charm_deploy.yaml
+    juju deploy mongodb
+    juju add-relation rails mongodb

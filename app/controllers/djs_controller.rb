@@ -31,7 +31,7 @@ class DjsController < ApplicationController
 
     respond_to do |format|
       if @dj.save
-        format.html { redirect_to @dj, notice: 'Dj was successfully created.' }
+        format.html { redirect_to @dj, notice: 'Application was sent.' }
         format.json { render :show, status: :created, location: @dj }
       else
         format.html { render :new }

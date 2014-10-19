@@ -1,49 +1,58 @@
-<p id="notice"><%= notice %></p>
+<div class="box2">
+  <h1><span>DJ Application</span></h1>
+  <div class="row">
+    <div class="span6">
+      <h2>Apply to be a Station Programmer, or a Live Performer</h2>
 
-<p>
-  <strong>Name first:</strong>
-  <%= @dj.name_first %>
-</p>
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name last:</strong>
-  <%= @dj.name_last %>
-</p>
+        <p>
+          <strong>Name first:</strong>
+          <%= @dj.name_first %>
+        </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @dj.email %>
-</p>
+        <p>
+          <strong>Name last:</strong>
+          <%= @dj.name_last %>
+        </p>
 
-<p>
-  <strong>Timezone:</strong>
-  <%= @dj.timezone %>
-</p>
+        <p>
+          <strong>Email:</strong>
+          <%= @dj.email %>
+        </p>
 
-<p>
-  <strong>Requested slot:</strong>
-  <%= @dj.requested_slot %>
-</p>
+        <p>
+          <strong>Timezone:</strong>
+          <%= @dj.timezone %>
+        </p>
 
-<p>
-  <strong>Live:</strong>
-  <%= @dj.live %>
-</p>
+        <p>
+          <strong>Requested slot:</strong>
+          <%= @dj.requested_slot %>
+        </p>
 
-<p>
-  <strong>Genres:</strong>
-  <%= @dj.genres %>
-</p>
+        <p>
+          <strong>Live:</strong>
+          <%= @dj.live %>
+        </p>
 
-<p>
-  <strong>Frequency:</strong>
-  <%= @dj.frequency %>
-</p>
+        <p>
+          <strong>Genres:</strong>
+          <%= @dj.genres %>
+        </p>
 
-<p>
-  <strong>Broadcast License Accepted:</strong>
-  <%= @dj.broadcast_license %>
-</p>
+        <p>
+          <strong>Frequency:</strong>
+          <%= @dj.frequency %>
+        </p>
 
-<%= link_to 'Edit', edit_dj_path(@dj) %> |
-<%= link_to 'Back', djs_path %>
+        <p>
+          <strong>Broadcast License Accepted:</strong>
+          <%= @dj.broadcast_license %>
+        </p>
+
+        <%= link_to 'Edit', edit_dj_path(@dj) %> |
+        <%= link_to 'Back', root_path %>
+      </div>
+  </div>
+</div>
